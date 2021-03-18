@@ -1,3 +1,21 @@
+- [Predicting the CPU relative performance](#predicting-the-cpu-relative-performance)
+  - [Dataset](#dataset)
+    - [Overview](#overview)
+    - [Task](#task)
+    - [Access](#access)
+    - [Preparation](#preparation)
+      - [Features](#features)
+    - [Data transformation and registration](#data-transformation-and-registration)
+  - [Automated ML](#automated-ml)
+    - [Results](#results)
+    - [Possible improvements](#possible-improvements)
+  - [Hyperparameter Tuning](#hyperparameter-tuning)
+    - [Results](#results-1)
+    - [Possible improvements](#possible-improvements-1)
+  - [Model Deployment](#model-deployment)
+    - [Querying the endpoint](#querying-the-endpoint)
+  - [Screen Recording](#screen-recording)
+- [Resources](#resources)
 
 # Predicting the CPU relative performance
 
@@ -310,6 +328,7 @@ This model slightly outperforms AutoML model, which has `r2_score=0,95975`.
 HyperDrive run models:
 ![HyperDrive run models](./assets/hyperdrive-run-models.png)
 
+### Possible improvements
 Possible improvements:
 * normalizing the numeric features before training using [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html) to the range of 0 to 1.
 * standardizing numeric features whose distribution is close to normal using [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler)
