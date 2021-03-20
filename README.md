@@ -27,6 +27,10 @@ The [CPU performance](https://archive.ics.uci.edu/ml/machine-learning-databases/
 ### Task
 The task is to predict the CPU relative performance of computer processors. The relative performance is represented by the *ERP* feature in the dataset.
 
+The project demonstrates the creation of the model using Azure AutoML and HyperDrive runs.
+Here is a workflow of the project which aims to find the best performing model:
+![Project workflow](./assets/capstone_workflow.png)
+
 ### Access
 The zipped dataset in [csv](;/../data/machine.zip) format is uploaded to Azure ML workspace.
 After the data is cleansed, the resulting dataset is registered in the Workspace for further use.
@@ -128,7 +132,7 @@ automl_config = AutoMLConfig(compute_target=compute_target,
 ```
 
 ### Results
-The best model, compatible with ONNX format, with`r2_score=0.9597` is VotingEnsemble according to the results available in the Azure ML Studio:
+The best model, with`r2_score=0.9597`, is VotingEnsemble according to the results available in the Azure ML Studio:
 ![AutoML run models](./assets/automl-run-models.png)
 
 The best model explanation and metrics can be also found in Azure Ml Studio:
